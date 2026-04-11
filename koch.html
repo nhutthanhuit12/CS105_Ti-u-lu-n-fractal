@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koch Snowflake — Fractal WebGL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">Fractal WebGL</a>
+        <div class="navbar-links">
+            <a href="koch.html" class="active">Koch Snowflake</a>
+            <a href="minkowski.html">Minkowski Island</a>
+        </div>
+    </nav>
+
+    <div class="fractal-page">
+        <div class="canvas-container">
+            <canvas id="glcanvas"></canvas>
+        </div>
+
+        <div class="control-panel">
+            <div class="panel-section">
+                <h3>Thông tin</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-value" id="stat-depth">0</div>
+                        <div class="stat-label">Bậc (Depth)</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="stat-vertices">4</div>
+                        <div class="stat-label">Số đỉnh</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="stat-segments">3</div>
+                        <div class="stat-label">Số đoạn</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="stat-dimension">1.26</div>
+                        <div class="stat-label">Chiều fractal</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-section">
+                <h3>Điều khiển</h3>
+                <div class="control-group">
+                    <div class="control-label">
+                        <span>Bậc đệ quy (Depth)</span>
+                        <span class="control-value" id="depth-display">0</span>
+                    </div>
+                    <input type="range" id="depth-slider" min="0" max="7" value="0" step="1">
+                </div>
+                <div class="control-group">
+                    <div class="control-label">
+                        <span>Màu nét vẽ</span>
+                    </div>
+                    <input type="color" id="color-picker" value="#4a9eff">
+                </div>
+            </div>
+
+            <div class="panel-section">
+                <h3>Hoạt ảnh</h3>
+                <button class="btn" id="btn-animate">Chạy hoạt ảnh</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="webgl_utils.js"></script>
+    <script src="koch.js"></script>
+</body>
+</html>
