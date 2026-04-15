@@ -35,7 +35,7 @@
 ├── minkowski.html      # Giao diện Minkowski Island
 ├── minkowski.js        # Logic & thuật toán Minkowski
 │
-├── sierpinski.html     # Giao diện Sierpinski (3 thuật toán)
+├── sierpinski.html     # Giao diện Sierpinski
 ├── sierpinski.js       # Logic & thuật toán Sierpinski
 │
 ├── mandelbrot.html     # Giao diện Mandelbrot & Julia Set
