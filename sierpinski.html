@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Sierpinski Triangles & Carpet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html" class="navbar-brand">Demo Fractal </a>
+        <div class="navbar-links">
+            <a href="koch.html">Koch</a>
+            <a href="minkowski.html">Minkowski</a>
+            <a href="sierpinski.html" class="active">Sierpinski</a>
+            <a href="mandelbrot.html">Mandelbrot & Julia</a>
+        </div>
+    </div>
+
+    <div class="fractal-page">
+        <div class="canvas-container">
+            <canvas id="glcanvas"></canvas>
+        </div>
+
+        <div class="control-panel">
+            <div class="panel-section">
+                <h3>Chọn Thuật Toán</h3>
+                <button class="btn active" id="btnTriRec" style="margin-bottom: 8px;">Tam giác (Đệ quy)</button>
+                <button class="btn" id="btnTriChaos" style="margin-bottom: 8px;">Tam giác (Chaos Game)</button>
+                <button class="btn" id="btnCarpet">Hình vuông (Carpet)</button>
+            </div>
+
+            <div class="panel-section" style="margin-top: 15px;">
+                <h3>Điều Khiển Mức Độ</h3>
+                <div class="control-group">
+                    <div class="control-label">
+                        <span id="levelLabel">Độ sâu đệ quy:</span>
+                        <span class="control-value" id="levelVal">4</span>
+                    </div>
+                    <div style="display: flex; gap: 10px; margin-top: 10px;">
+                        <button class="btn" id="btnDecrease">Giảm</button>
+                        <button class="btn" id="btnIncrease">Tăng</button>
+                        <button class="btn" id="btnReset" style = "background-color: #d55950; color: white;">Reset</button>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="webgl_utils.js"></script>
+    <script src="sierpinski.js"></script>
+</body>
+</html>

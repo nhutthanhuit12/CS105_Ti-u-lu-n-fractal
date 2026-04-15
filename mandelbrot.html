@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Mandelbrot & Julia Set Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background: #111; color: white;">
+    <div class="navbar">
+        <a href="index.html" class="navbar-brand">Demo Fractal</a>
+        <div class="navbar-links">
+            <a href="koch.html">Koch</a>
+            <a href="minkowski.html">Minkowski</a>
+            <a href="sierpinski.html">Sierpinski</a>
+            <a href="mandelbrot.html" class="active">Mandelbrot & Julia</a>
+        </div>
+    </div>
+
+    <div class="fractal-page">
+        <div class="canvas-container" style="background: #000; overflow: hidden;">
+            <canvas id="glcanvas"></canvas>
+        </div>
+
+        <div class="control-panel" style="background: #1a1a1a; color: #ccc; border-left: 1px solid #333;">
+            <div class="panel-section">
+                <h3>Chế độ hiển thị</h3>
+                <button id="toggleBtn" class="btn active">MANDELBROT</button>
+                <p style="font-size: 0.75rem; margin-top: 10px;">
+                    • <b>Lăn chuột:</b> Phóng to/thu nhỏ<br>
+                    • <b>Chuột trái:</b> Di chuyển (Pan)<br>
+                    • <b>Di chuột (Julia):</b> Thay đổi hằng số <i>c</i>
+                </p>
+            </div>
+            
+            <div class="panel-section" style="margin-top: 15px;">
+                <h3>Thông số hệ thống</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-value" id="zoomVal">1.0x</div>
+                        <div class="stat-label">Độ phóng đại</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">GPU</div>
+                        <div class="stat-label">Render</div>
+                    </div>
+                </div>
+            </div>
+            <button id="btnReset" class="btn" style="margin-top: 20px; background: #e74c3c; color: white; border: none;">Reset</button>
+        </div>
+    </div>
+
+    <script src="webgl_utils.js"></script>
+    <script src="mandelbrot.js"></script>
+</body>
+</html>
